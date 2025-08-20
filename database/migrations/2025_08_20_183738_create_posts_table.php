@@ -19,12 +19,12 @@ return new class extends Migration
             $table->text('excerpt')->nullable();
             $table->longText('content')->nullable();
             $table->string('category')->nullable(); // annonce, doctrine, reportage...
+            $table->foreignId('category_id')->default(1)->constrained('categories')->nullOnDelete('cascade');
+
             $table->enum('status',['draft','review','scheduled','published','archived'])->default('draft');
             $table->timestamp('published_at')->nullable();
             $table->string('seo_title')->nullable();
             $table->text('seo_description')->nullable();
-
-
             $table->timestamps();
         });
     }
