@@ -9,18 +9,11 @@ return new class extends Migration {
      * Run the migrations.
      */
     public function up(): void {
-        Schema::create('videos', function (Blueprint $table) {
+        Schema::create('series', function (Blueprint $table) {
             $table->id();
-
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            $table->string('provider');     // youtube, vimeo, file
-            $table->string('provider_ref'); // id yt/vimeo ou chemin
-            $table->integer('duration')->nullable();
-            $table->string('status', 20)->default('draft');    // draft|review|scheduled|published|archived
-            $table->timestamp('published_at')->nullable();
-
             $table->timestamps();
         });
     }
@@ -28,8 +21,7 @@ return new class extends Migration {
     /**
      * Reverse the migrations.
      */
-    public function down(): void
-    {
-        Schema::dropIfExists('videos');
+    public function down(): void {
+        Schema::dropIfExists('series');
     }
 };
