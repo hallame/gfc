@@ -17,19 +17,19 @@ Route::get('/contact', [UserController::class, 'contact'])->name('contact');
 
 
 
-Route::prefix('admin')->name('admin.')->group(function () {
-        Route::get('/login', [AdminAuthController::class, 'login'])->name('login');
-        Route::post('/access', [AdminAuthController::class, 'access'])->name('access');
-        Route::post('/forgot-password', [AdminAuthController::class, 'sendResetLink'])->name('forgot-password.send');
-        Route::get('/reset-password/{token}', [AdminAuthController::class, 'showResetPasswordForm'])->name('reset-password');
-        Route::post('/reset-password', [AdminAuthController::class, 'resetPassword'])->name('reset-password.update');
+// Route::prefix('admin')->name('admin.')->group(function () {
+//         Route::get('/login', [AdminAuthController::class, 'login'])->name('login');
+//         Route::post('/access', [AdminAuthController::class, 'access'])->name('access');
+//         Route::post('/forgot-password', [AdminAuthController::class, 'sendResetLink'])->name('forgot-password.send');
+//         Route::get('/reset-password/{token}', [AdminAuthController::class, 'showResetPasswordForm'])->name('reset-password');
+//         Route::post('/reset-password', [AdminAuthController::class, 'resetPassword'])->name('reset-password.update');
 
 
-    // connectés admin
-    Route::middleware('admin.auth')->group(function () {
-        Route::get('/logout', [AdminAuthController::class, 'logout'])->name('logout');
-        Route::get('/myprofile', [AdminAuthController::class, 'myprofile'])->name('myprofile');
-        Route::post('/myprofile/update', [AdminAuthController::class, 'updateMyProfile'])->name('myprofile.update');
-        Route::view('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
-    });
-});
+//     // connectés admin
+//     Route::middleware('admin.auth')->group(function () {
+//         Route::get('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+//         Route::get('/myprofile', [AdminAuthController::class, 'myprofile'])->name('myprofile');
+//         Route::post('/myprofile/update', [AdminAuthController::class, 'updateMyProfile'])->name('myprofile.update');
+//         Route::view('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+//     });
+// });
