@@ -4,7 +4,7 @@
   <footer id="contact" class="bg-[var(--brand-surface)] text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 grid md:grid-cols-3 gap-10">
       <div>
-        <div class="flex items-center gap-3 mb-3"><span class="w-10 h-10 rounded-[var(--radius)] bg-gradient-to-br from-[var(--brand-gold)] to-[var(--brand-gold-2)]"></span><span class="font-bold">GFC</span></div>
+        <div class="flex items-center gap-3 mb-3"><span class="w-10 h-10 rounded-[var(--radius)] bg-gradient-to-br from-[var(--brand-gold)] to-[var(--brand-gold-2)]"></span><span class="font-bold text-5xl">GFC</span></div>
         <p class="opacity-90 max-w-md">Plateforme officielle du GFC. Ressources doctrinales fidèles au Rév. Jean AGOUNKPE : enseignements, vidéos, méditations, actualités et événements.</p>
       </div>
       <div>

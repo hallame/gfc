@@ -45,13 +45,16 @@
         }
         }
     </script>
+
+    <!-- Favicon et icônes -->
+    <link rel="icon" type="image/png" href="{{ asset('assets/front/images/logo.jpg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/front/images/logo.jpg') }}">
 </head>
 <body class="font-sans text-[var(--brand-ink)] bg-gradient-to-tr from-[var(--brand-50)] to-[var(--brand-100)] selection:bg-[var(--brand-gold-2)]/60">
   <!-- Skip link -->
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:bg-white focus:text-[var(--brand-ink)] focus:px-3 focus:py-2 focus:rounded-md focus:shadow">Aller au contenu</a>
 
      @include('frontend.layouts.header')
-
 
   <main id="main">
     @yield('content')
